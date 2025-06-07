@@ -27,14 +27,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class='canhoto'>
         <p><strong>Campanha:</strong> $nomeCampanha</p>
         <p><strong>Número:</strong> $contadorDeRifas</p>
-        <p><strong>Prêmio:</strong> $premios</p>
-        <p><strong>Valor:</strong> R$ $valorRifa</p>
+        
     </div>
-    <div class='canhoto'>
-        <p><strong>Campanha:</strong> $nomeCampanha</p>
-        <p><strong>Número:</strong> $contadorDeRifas</p>
+    <div class='carne'>
+        <p><strong>Você está na campanha:</strong> $nomeCampanha</p>
+        <p><strong>Número:</strong> <p class = 'numeroRifa'>$contadorDeRifas</p></p>
         <p><strong>Prêmio:</strong> $premios</p>
         <p><strong>Valor:</strong> R$ $valorRifa</p>
+        <img src='https://cdn-icons-png.flaticon.com/512/3210/3210051.png'>
+
     </div>
 </div>";
         }

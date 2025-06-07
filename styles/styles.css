@@ -50,7 +50,8 @@ button:hover {
     text-align: center;
     font-size: 24px;
     margin-bottom: 10px;
-    color: #333;
+    color: #000000;
+
 }
 
 .rifas-container {
@@ -63,40 +64,71 @@ button:hover {
 
 .bilhete {
     display: flex;
-    width: 18,75em;
-    border: 2px;
+
+
+    border: 0.2em solid #8c00ff;
     border-radius: 8px;
-    background-color: #fff;
+    background: linear-gradient(135deg, #1a1a3a, #2a2a4d);
+    box-shadow: 0 0 12px rgba(140, 0, 255, 0.4);
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
+
+
 
 .canhoto {
     flex: 1;
+    justify-content: center;
+    align-self: center;
     padding: 10px;
-    border-right: 1px dashed #999;
+    border-right: 2px dashed #bbb;
+    color: #e0e0ff;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.canhoto:last-child {
-    border-right: none;
+.carne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 5em;
+    margin-right: 5em;
+    padding: 0.7em;
+    color: #f5f5ff;
+    text-align: center;
+    gap: 0.5em;
 }
+
+.carne .numeroRifa {
+    color: #2ccdfa;
+}
+
+.carne img {
+    width: 40px;
+    height: 40px;
+    margin-top: 0.5em;
+    filter: drop-shadow(0 0 4px #8c00ff);
+}
+
+
 
 .canhoto p {
     margin: 0.25em 0;
     font-size: 14px;
 }
 
-
 @media print {
     body * {
         visibility: hidden;
-        /* esconde tudo */
     }
 
     .rifas-container,
     .rifas-container * {
         visibility: visible;
-        /* mostra só o container das rifas e filhos */
     }
 
     .rifas-container {
@@ -104,5 +136,20 @@ button:hover {
         top: 0;
         left: 0;
         width: 100%;
+    }
+
+    .bilhete {
+        box-shadow: 0 0 12px rgba(140, 0, 255, 0.4);
+        border: 0.2em solid #8c00ff;
+        background: linear-gradient(135deg, #1a1a3a, #2a2a4d);
+        color: #f5f5ff;
+    }
+
+    .carne .numeroRifa {
+        color: #2ccdfa;
+    }
+
+    .carne img {
+        display: block;
     }
 }
